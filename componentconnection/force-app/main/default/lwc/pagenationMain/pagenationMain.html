@@ -1,0 +1,14 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-button label="Previous" onclick={previousMeth} disabled={disabledPrev}></lightning-button>
+        </lightning-layout-item>
+ 
+        <lightning-layout-item flexibility="grow">
+            <p class="slds-text-align_center">Displaying {currentpage} of {totalpage} Page</p>
+        </lightning-layout-item>
+        <lightning-layout>
+            <lightning-button label="Next" onclick={nextMeth} disabled={disabledNext}></lightning-button>
+    </lightning-layout>
+    </lightning-layout>
+</template>

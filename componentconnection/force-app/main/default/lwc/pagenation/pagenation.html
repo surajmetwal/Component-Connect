@@ -1,0 +1,24 @@
+<template>
+    
+    <lightning-card title="Pagenation">
+        <!-- <div>
+            <lightning-input label="Show" onchange={getlimit}></lightning-input>
+        </div> -->
+        <div>
+            <template if:true={visibleac}>
+                <template for:each={visibleac} for:item="acc">
+                    <p key={acc.Id}>
+                        {acc.Name}
+                        {acc.Phone}
+                    </p>
+
+                </template>
+
+            </template>
+        </div>
+        <div slot="footer" class="slds-var-m-horizontal_medium">
+            <c-pagenation-Main records={totalac}  onupdate={listhandler}>  </c-pagenation-Main>
+        </div>
+    </lightning-card>
+    
+</template>
